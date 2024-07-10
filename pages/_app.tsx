@@ -18,34 +18,6 @@ const publicPages = ["/"];
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
-  return (
-    <ClerkLoaded>
-      <Header />
-      {publicPages.includes(router.pathname) ? (
-        <main>
-          <Component {...pageProps} />
-        </main>
-      ) : (
-        <>
-          <SignedIn>
-            <Component {...pageProps} />
-          </SignedIn>
-          <SignedOut>
-            <div className="protected">
-              <p>You need to be signed in to access this page.</p>
-            </div>
-          </SignedOut>
-        </>
-      )}
-
-      {/* footer */}
-      <footer>
-        <GithubLink
-          label="'Simple' is a live demo that showcases Clerk components"
-          repoLink="https://github.com/clerkinc/clerk-nextjs-examples/tree/main/examples/simple"
-        />
-      </footer>
-    </ClerkLoaded>
-  );
+  return <p>Hello World</p>;
 }
 export default MyApp;
