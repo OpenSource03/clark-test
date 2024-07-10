@@ -1,5 +1,7 @@
 import {withAuth} from "@clerk/nextjs/api";
 
+export const runtime = 'edge';
+
 export default withAuth((req, res) => {
   res.statusCode = 200;
 
