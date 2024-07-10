@@ -1,8 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { withAuth, WithAuthProp } from "@clerk/nextjs/api";
 
-export const runtime = "edge";
-
+export const config = { runtime: "edge" };
 export default withAuth(
   (req: WithAuthProp<NextApiRequest>, res: NextApiResponse<string>) => {
     res.statusCode = 200;
