@@ -1,7 +1,5 @@
 import { withAuth } from "@clerk/nextjs/api";
 
-export const config = { runtime: "edge" };
-
 export default withAuth((req, res) => {
   res.statusCode = 200;
 
@@ -11,3 +9,7 @@ export default withAuth((req, res) => {
     res.json("not signed in");
   }
 });
+
+export const config = {
+  runtime: "edge",
+};
